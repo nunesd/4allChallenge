@@ -1,0 +1,81 @@
+@default-background: #FFF;
+@default-border-color: #f1f4f7;
+@custom-light-border: lightgray;
+@background-pic: orange;
+@background-cards: #30a5ff;
+@background-comment-card: #ffb53e;
+@background-users-card: #1ebfae;
+@background-views-card: #f9243f;
+@card-data-color: #9fadbb;
+
+.default-border(){
+    border: 2px solid #f1f4f7;
+}
+
+.custom-border(@weight, @type, @color) {
+    border: @weight @type @color;
+}
+
+.border-right(@weight, @type, @color) {
+    border-right: @weight @type @color;
+}
+
+.border-bottom(@weight, @type, @color) {
+    border-bottom: @weight @type @color;
+}
+
+.border-left(@weight, @type, @color) {
+    border-left: @weight @type @color;
+}
+
+.border-top(@weight, @type, @color) {
+    border-top: @weight @type @color;
+}
+
+.border-radius(@radius) {
+    -webkit-border-radius: @radius;
+        -moz-border-radius: @radius;
+            border-radius: @radius;
+}
+
+.opacity (@opacity: 0.5) {
+	-webkit-opacity: 	@opacity;
+	-moz-opacity: 		@opacity;
+	opacity: 		@opacity;
+}
+
+.transition (@transition) {
+	-webkit-transition: @transition;  
+	-moz-transition:    @transition;
+	-ms-transition:     @transition; 
+	-o-transition:      @transition;  
+}
+.transform(@string){
+	-webkit-transform: @string;
+	-moz-transform: 	 @string;
+	-ms-transform: 		 @string;
+	-o-transform: 		 @string;
+}
+.scale (@factor) {
+	-webkit-transform: scale(@factor);
+	-moz-transform: 	 scale(@factor);
+	-ms-transform: 		 scale(@factor);
+	-o-transform: 		 scale(@factor);
+}
+.rotate (@deg) {
+	-webkit-transform: rotate(@deg);
+	-moz-transform: 	 rotate(@deg);
+	-ms-transform: 		 rotate(@deg);
+	-o-transform: 		 rotate(@deg);
+}
+
+.flex-center(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-vertical-center(){
+    display: flex;
+    align-items: center;
+}

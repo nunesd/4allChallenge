@@ -59,14 +59,14 @@ export class App extends Component<{}, State> {
 
     public componentDidMount() {
         Service.getData("/widgets").then(result => {
-            this.setState({widgets: result})
+            this.setState({widgets: result as any})
         })
         Service.getData("/pageViews").then(result => {
-            this.setState({chart: result})
+            this.setState({chart: result as any})
         })
         Service.getData("/messages").then(result => {
-            this.setState({messages: result})
-        })
+            this.setState({messages: result as any})
+		})
     }
   }
   

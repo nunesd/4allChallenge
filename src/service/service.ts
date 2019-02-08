@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export const Service= {
     
     /**
@@ -9,13 +11,7 @@ export const Service= {
      * Function to get Data from API endpoint.
      * @param url Endpoint from API
      */
-     getData: (url: string) => fetch(Service.API + url).then(response => response.json().then(response => response)),
-     postData: (url: string, body: any) => fetch(Service.API + url, {
-        method: 'POST',
-        headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({message: body})
-    })
+     getData: (url: string) =>  axios.get(Service.API + url).then(response => response.data),
+     postData: (url: string, body: any) => axios.post(Service.API + url, {message: body})
+    
 }

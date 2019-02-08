@@ -1,7 +1,9 @@
+@import "./mixin";
+
 .Chat {
 	max-width: 1050px;
-	background-color: #fff;
-	border-radius: 4px;
+	background-color: @default-background;
+	.border-radius(4px);
 	box-shadow: 0 0 14px -3px rgba(0, 0, 0, 0.25);
 	.chat-title {
 		display: flex;
@@ -9,36 +11,36 @@
 		padding: 15px;
 		color: #5f6468;
 		font-weight: normal;
-		border-bottom: 2px solid #f1f4f7;
+		.border-bottom(2px, solid, @default-border-color);
 		i {
 			padding-right: 15px;
 			font-size: 30px;
 		}
 	}
 	.chat-messages {
-		transition: .25s;
+		.transition(.25s);
 		height: 300px;
 		width: 100%;
 		overflow-y: scroll;
 		.message-container {
 			min-height: 120px;
 			&:not(:last-child) {
-				border-bottom: 1px solid lightgray;
+				.border-bottom(1px, solid, @custom-light-border);
 			}
-			border-right: 1px solid lightgray;
+			.border-right(1px, solid, @custom-light-border);
 			padding: 15px;
 			display: flex;
 			align-items: center;
 			.picture {
 				img {
-					border-radius: 50%;
+					.border-radius(50%);
 					max-width: 80px;
 				}
 				.no-pic {
 					width: 80px;
 					height: 80px;
-					border-radius: 50%;
-					background-color: orange;
+					.border-radius(50%);
+					background-color: @background-pic;
 				}
 			}
 			.message-text {
@@ -63,7 +65,7 @@
 		}
 	}
 	.chat-send {
-		border-top: 1px solid lightgray;
+		.border-top(1px, solid, @custom-light-border);
 		display: flex;
 		align-items: center;
 		height: 65px;
@@ -71,25 +73,25 @@
 		input {
 			padding: 0 15px;
 			height: 100%;
-			border: 2px solid #f1f4f7;
-			border-radius: 4px 0 0 4px;
+			.default-border();
+			.border-radius(54px 0 0 4px);
 			border-right: none;
 			width: 100%;
 		}
 		button {
 			letter-spacing: .5px;
 			cursor: pointer;
-			transition: .25s;
+			.transition(.25s);
 			font-size: 16px;
 			height: 100%;
 			border: none;
 			color: #fff;
 			font-weight: bold;
 			background-color: #8bda12;
-			border-radius: 0 4px 4px 0;
+			.border-radius(0 4px 4px 0);
 			padding: 0 15px;
 			&:hover {
-				opacity: .8;
+				.opacity(.8);
 			}
 		}
 	}

@@ -4,12 +4,11 @@
 		margin-bottom: 10px;
 		.card-container {
 			box-shadow: 0 0 14px -3px rgba(0, 0, 0, 0.25);
-			border-radius: 4px;
-			display: flex;
+			.border-radius(4px);
+			.flex-vertical-center();
 			height: 100%;
 			width: 100%;
-			align-items: center;
-			background-color: #fff;
+			background-color: @default-background;
 			flex-direction: column;
 			@media screen and (min-width: 768px) {
 				flex-direction: row;
@@ -18,37 +17,34 @@
 				padding: 15px 0;
 				width: 100%;
 				border-radius: 4px 4px 0 0;
-				display: flex;
-				align-items: center;
-				justify-content: center;
+				.flex-center();
 				font-size: 50px;
 				color: #fff;
 				@media screen and (min-width: 768px) {
 					padding: 0;
-					border-radius: 4px 0 0 4px;
+					.border-radius(4px 0 0 4px);
 					width: 125px;
 					height: 100%;
 				}
 				&.new-orders {
-					background-color: #30a5ff;
+					background-color: @background-cards;
 				}
 				&.comments {
 					> i {
 						transform: scale(1.1, 1.2);
 					}
-					background-color: #ffb53e;
+					background-color: @background-comment-card;
 				}
 				&.new-users {
-					background-color: #1ebfae;
+					background-color: @background-users-card;
 				}
 				&.page-views {
-					background-color: #f9243f;
+					background-color: @background-views-card;
 				}
 			}
 			.card-data {
-				display: flex;
+				.flex-vertical-center();
 				flex-direction: column;
-				align-items: center;
 				padding: 15px;
 				@media screen and (min-width: 768px) {
 					align-items: flex-start;
@@ -57,11 +53,11 @@
 					line-height: 0.8;
 					font-size: 25px;
 					font-size: 30px;
-					transition: .5s;
+					.transition(.5s);
 					color: #5f6468;
 				}
 				.card-data-title {
-					color: #9fadbb;
+					color: @card-data-color;
 				}
 			}
 		}
